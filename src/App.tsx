@@ -29,16 +29,40 @@ export const App = () => {
   const { height } = useDimensions(containerRef);
 
   return (
-    <motion.nav
-      initial={false}
-      animate={isOpen ? 'open' : 'closed'}
-      custom={height}
-      ref={containerRef}
-    >
-      <motion.div className="background" variants={sidebar} />
-      <Navigation />
-      <MenuToggle toggle={() => toggleOpen()} />
-    </motion.nav>
+    <>
+      <motion.nav
+        initial={false}
+        animate={isOpen ? 'open' : 'closed'}
+        custom={height}
+        ref={containerRef}
+      >
+        <motion.div className="background" variants={sidebar} />
+        <Navigation />
+        <MenuToggle toggle={() => toggleOpen()} />
+      </motion.nav>
+      <motion.div
+        className="frame"
+        whileTap={{
+          boxSizing: 'border-box',
+          width: 99,
+          height: 442,
+          backgroundColor: '#ff99ce',
+          overflow: 'visible',
+          opacity: 0.31,
+          transform: 'rotate(-49deg)',
+          border: '7px dotted #ff2e2e',
+        }}
+        transition={{
+          type: 'spring',
+          delay: 0,
+          stiffness: 500,
+          damping: 60,
+          mass: 1,
+        }}
+      >
+        Abc
+      </motion.div>
+    </>
   );
 };
 

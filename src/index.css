@@ -93,3 +93,10 @@ li {
   align-items: center;
   cursor: pointer;
 }
+
+.frame {
+  width: 115px;
+  height: 72px;
+  background-color: #99eeff;
+  overflow: visible;
+}
