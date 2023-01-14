@@ -1,1 +1,1 @@
-https://github.com/ZouYouShun/framer-motion-example/tree/master/src
+https://github.com/ZouYouShun/framer-motion-example/blob/master/src/README.md
